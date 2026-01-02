@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Face Recognition System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <h1>Face Recognition System</h1>
+  <p class="subtitle">Multi-Face Detection with Stable Boxes</p>
+
+  <div class="camera-box">
+    <video id="video" autoplay muted playsinline></video>
+    <canvas id="overlay"></canvas>
+  </div>
+
+  <div class="dashboard">
+    <p id="status">Loading models...</p>
+    <p id="facesCount">Faces Detected: 0</p>
+  </div>
+
+  <div class="controls">
+    <button onclick="window.location.href='game.html'">Play Face Game</button>
+  </div>
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
+<script defer src="frs.js"></script>
+</body>
+</html>

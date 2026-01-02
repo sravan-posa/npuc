@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glitch FRS Cover</title>
+<link rel="stylesheet" href="style.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap');
+
+body {
+  margin:0; padding:0;
+  font-family: 'Orbitron', monospace;
+  background: #0f0f0f;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  overflow:hidden;
+}
+
+.cover-container {
+  text-align:center;
+  padding: 50px 40px;
+  background: rgba(0,0,0,0.7);
+  border:2px solid #00ffff;
+  border-radius: 20px;
+  box-shadow: 0 0 40px #ff00ff, 0 0 80px #00ffff;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%,19%,21%,23%,25%,54%,56%,100% { opacity:1; }
+  20%,22%,24%,55% { opacity:0.4; }
+}
+
+h1 {
+  font-size: 3rem;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #ff00ff, 0 0 10px #00ffff;
+  animation: glitch-text 1s infinite;
+}
+
+@keyframes glitch-text {
+  0% { text-shadow: 2px 0 #ff0000, -2px 2 #00ffff; }
+  25% { text-shadow: -2px -2 #00ffff, 2px 2 #ff00ff; }
+  50% { text-shadow: 2px 2 #ff00ff, -2px -2 #00ffff; }
+  75% { text-shadow: -2px 0 #00ffff, 2px -2 #ff00ff; }
+  100% { text-shadow: 2px 0 #ff00ff, -2px 2 #00ffff; }
+}
+
+h3 { font-weight:400; margin-bottom:30px; color:#00ffff; }
+
+ul { list-style:none; padding:0; margin-bottom:40px; font-weight:600;}
+ul li { margin:10px 0; font-size:1.1rem; color:#ff00ff; }
+
+.start-btn {
+  padding:15px 30px; font-size:1.2rem; font-weight:bold;
+  border:none; border-radius:15px; cursor:pointer;
+  background: #ff00ff;
+  color:#00ffff;
+  text-shadow: 0 0 5px #00ffff;
+  box-shadow: 0 0 15px #ff00ff, 0 0 30px #00ffff;
+  transition:0.3s;
+}
+.start-btn:hover {
+  transform:translateY(-5px) skew(-5deg,2deg);
+  box-shadow: 0 0 25px #ff00ff, 0 0 50px #00ffff;
+}
+</style>
+</head>
+<body>
+
+<div class="cover-container">
+    <h1> Face Recognition</h1>
+    <h3>Multi-Face Detection & Interactive Game</h3>
+    <p><strong>Created By:</strong></p>
+    <ul>
+      <li>1. Sravan</li>
+      <li>2. Goutham</li>
+      <li>3. Nandan</li>
+      <li>4. ChatGPT</li>
+    </ul>
+    <button class="start-btn" onclick="window.location.href='index.html'">Start</button>
+</div>
+
+</body>
+</html>
+ 

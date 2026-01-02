@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glitch Face Flappy Bird</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app glitch-app">
+  <h1 class="glitch-title"> Face Flappy Bird</h1>
+  <p class="subtitle glitch-subtitle">Move your face vertically to control the bird!</p>
+
+  <div class="camera-box glitch-box">
+    <video id="video" autoplay muted playsinline></video>
+    <canvas id="overlay"></canvas>
+    <canvas id="gameCanvas"></canvas>
+  </div>
+
+  <div class="dashboard glitch-box">
+    <p id="status">Loading models...</p>
+    <p id="score">Score: 0</p>
+    <p id="timer">Time Left: 60</p>
+  </div>
+</div>
+
+<script defer src="https://cdn.jsdelivr.net/npm/@vladmandic/face-api/dist/face-api.min.js"></script>
+<script defer src="game.js"></script>
+</body>
+</html>
